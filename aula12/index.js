@@ -1,24 +1,14 @@
-function saudacao(nome) {
-    return `Bom dia ${nome}!`;
+/*
+&& -> Tudo verdadeiro
+|| -> Tudo falso
+*/
+
+const hora = 20;
+
+if (hora >= 0 && hora <=11) {
+    console.log('Bom dia');
+} else if (hora >=12 && hora <= 17) {
+    console.log('Boa tarde!')
+} else if (hora >= 18 && 23) {
+    console.log('Boa noite')
 }
-
-const variavel = saudacao('Luis');
-console.log(variavel)
-
-function soma(x, y) {
-    const resultado = x + y;
-    return resultado;
-}
-
-const resultado = soma(5, 10);
-console.log(resultado)
-
-const raiz = function (n) {
-    return n ** 0.5;
-}
-
-console.log(raiz(9));
-
-// Arrow function
-const raiz2 = n => n ** 0.5;
-console.log(raiz(25));

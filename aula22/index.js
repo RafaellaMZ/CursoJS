@@ -1,27 +1,20 @@
-let i = 0;
+// Try, catch, throw
 
-while (i <= 10) {
-    console.log(i);
-    i++;
+function soma(x, y) {
+    if (
+        typeof x !== 'number' ||
+        typeof y !== 'number'
+    ) {
+        throw new Error('x e y precisam ser números.');
+    }
+
+    return x + y;
 }
-console.log('#######');
 
-function random (min,max){
-    const r = Math.random() * (max - min) + min;
-    return Math.floor(r);
-} 
 
-const min = 1;
-const max = 50;
-let rand = random(min,max);
-
-while (rand !== 10) {
-    rand = random(min,max);
-    console.log(rand);
+try {
+    console.log(soma(1, 2));
+console.log(soma('1', 2))
+} catch (error) {
+    console.log('Alguma informação amigável ao usuário SEMPRE')
 }
-console.log('#########')
-
-do {
-    rand = random(min,max);
-    console.log(rand);
-} while(rand == 10);
